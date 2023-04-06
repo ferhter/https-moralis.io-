@@ -1,0 +1,249 @@
+html,
+.start_msg,
+.start_wrapper-button,
+.features_col-text,
+.configurator_header-text,
+.configurator_text,
+.configurator_type,
+.programs_header-text,
+.programs_text,
+.programs_type,
+.installed-program_uninstall-single {
+  font-family: 'Proxima Nova Regular', 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTJBQkFGRUZFOTIyMTFFMEJDRDNEQzkxOTVGOTNBODAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTJBQkFGRjBFOTIyMTFFMEJDRDNEQzkxOTVGOTNBODAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MkFCQUZFREU5MjIxMUUwQkNEM0RDOTE5NUY5M0E4MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5MkFCQUZFRUU5MjIxMUUwQkNEM0RDOTE5NUY5M0E4MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtrV+I8AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC',sizingMethod=crop);
+  zoom: 1;
+}
+.start {
+  padding-bottom: 55px;
+}
+.start_list-title-custom-control {
+  line-height: 20px;
+}
+.start_list-custom-control {
+  line-height: 14px;
+}
+.start_list-title-custom-control .custom-control_checkbox-input-label {
+  padding-top: 5px;
+}
+.start_wrapper-button {
+  font-size: 21px;
+}
+.start-popover {
+  border: 1px solid #ccc;
+}
+.footer {
+  position: absolute;
+  height: 55px;
+  padding: 10px 0 6px 0;
+}
+.footer_meta-lang-select {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+}
+.footer_meta-lang-select select {
+  height: 30px;
+  width: 100px;
+  font-size: 14px;
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+.menu_language-icon {
+  margin-top: 11px;
+}
+.menu_language-label-arrow {
+  display: none;
+}
+.menu_language-select {
+  top: 5px;
+  cursor: pointer;
+}
+.menu_language-select select,
+.menu_language-select {
+  height: 1em;
+}
+.minify-menu .menu_language-select,
+.window-max-width-800 .menu_language-select,
+.window-min-width-800 .menu_language-select,
+.window-min-width-1024 .menu_language-select {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  right: 0;
+}
+.menu_language-select select {
+  margin-top: 4px;
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+.minify-menu .menu_language-select select,
+.window-max-width-800 .menu_language-select select,
+.window-min-width-800 .menu_language-select select,
+.window-min-width-1024 .menu_language-select select {
+  top: 10px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.footer_meta-lang-label,
+.menu_language-label {
+  position: absolute;
+  background: none;
+}
+.footer_meta-lang-label,
+.menu_language-label {
+  display: none;
+}
+.menu_language {
+  height: 56px;
+  border: none;
+  padding: 10px 0 10px 16px;
+}
+.minify-menu .menu_language,
+.window-max-width-800 .menu_language,
+.window-min-width-800 .menu_language,
+.window-min-width-1024 .menu_language {
+  width: 64px;
+  height: 56px;
+}
+.minify-menu .menu_copyright-btn,
+.window-max-width-800 .menu_copyright-btn,
+.window-min-width-800 .menu_copyright-btn,
+.window-min-width-1024 .menu_copyright-btn {
+  width: 64px;
+}
+.menu_language-select select {
+  width: 130px;
+  height: 25px;
+  position: static;
+  line-height: 1em;
+}
+.footer_meta-lang-icon {
+  margin-top: 3px;
+}
+.footer_expert-icon {
+  margin-top: 3px;
+}
+
+.header_controls-btn img {
+  margin-top: 8px;
+}
+.programs-screen_head-btn {
+  width: 320px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.window-max-width-800 .drivers-footer_btn,
+.window-min-width-800 .drivers-footer_btn {
+  width: 200px !important;
+}
+.drivers-header_btn-caption {
+  width: 100%;
+}
+.drivers-screen_driver-menu-list {
+  border: 1px solid #b3b3b3;
+}
+.window-min-width-1024 .custom-control_radio-input,
+.window-min-width-1200 .custom-control_radio-input {
+  margin-left: 10px;
+}
+.window-max-width-800 .drivers-screen_list-name-label,
+.window-min-width-800 .drivers-screen_list-name-label {
+  padding-left: 15px;
+}
+.drivers-screen_list-row.drivers-screen_list-dropdown .drivers-screen_list-cell.drivers-screen_list-name {
+  padding-left: 20px;
+  border-left: 5px solid #FFFFFF;
+}
+.drivers-screen_list-row.drivers-screen_list-dropdown:hover .drivers-screen_list-cell.drivers-screen_list-name {
+  border-left: 5px solid #f7f6f3;
+}
+.drivers-screen_list-row.drivers-screen_list-dropdown.is-checked .drivers-screen_list-cell.drivers-screen_list-name {
+  border-left: 5px solid #004777;
+}
+.drivers-screen_list-row.drivers-screen_list-dropdown.is-recommended .drivers-screen_list-cell.drivers-screen_list-name {
+  border-left: 5px solid #44ad64;
+}
+.drivers-screen_list-problem {
+  padding-left: 95px;
+}
+.installed-program-row_arrow-col,
+.installed-program-row_arrow {
+  width: 38px;
+}
+.main tr .installed-program_row-expanded .installed-program_caption {
+  visibility: visible;
+  display: block;
+  height: auto;
+}
+.popover_head .popover_head-btn {
+  margin: 0;
+}
+.popover.popover_bottom .arrow {
+  top: -10px;
+}
+.installed-program_caption {
+  visibility: visible;
+  display: none;
+  height: auto;
+}
+.uninstall-popover {
+  top: -100%;
+  bottom: 50px;
+  left: -83px;
+}
+.uninstall-popover_arrow {
+  bottom: -16px;
+}
+.installed-program_row-expanded .installed-program-row_rating {
+  height: 150px;
+}
+.burger-menu_link-disabled,
+.burger-menu_divider-is-hidden {
+  display: none;
+}
+.burger-menu_first-link {
+  margin-top: 18px;
+}
+.installed-program_border {
+  height: 100%;
+}
+
+.custom-control_radio-input,
+.custom-control_radio-input-label {
+  vertical-align: middle;
+}
+.settings-screen_select-arrow {
+  display: none;
+}
+.settings-screen_select select {
+  width: 100%;
+}
+.installation-header-promo_banner {
+  display: none;
+}
+.installation-header-promo_banner.is-visible {
+  display: block;
+}
+.final-popover {
+  right: 20px;
+}
+.ie_inline-block {
+  display: inline;
+  zoom: 1;
+}
+.window-max-width-800 .games_top-list, {
+  width: 400px;
+}
+.window-min-width-800 .games_top-list,
+.window-min-width-1024 .games_top-list {
+  width: 650px;
+}
+.window-min-width-1200 .games_top-list {
+  width: 1000px;
+}
+.first-loading-massage,
+.next-loading-massage {
+  background-color: #08a09a;
+}

@@ -1,0 +1,19 @@
+.copyright {
+    position: absolute !important;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.programs-list_head-title,
+.programs-list_head-btn {
+  display: inline;
+}
+
+.window-min-width-1024 .settings-header_caption,
+.window-min-width-1200 .settings-header_caption {
+  width: 710px;
+}
+.configurator_content-is-disabled {
+  visibility: hidden;
+}

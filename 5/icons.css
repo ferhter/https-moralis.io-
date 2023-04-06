@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'DRPicons';
+  src: url('./fonts/DRPicons/DRPicons-webfont.eot');
+  src: url('./fonts/DRPicons/DRPicons-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/DRPicons/DRPicons-webfont.woff') format('woff'),
+       url('./fonts/DRPicons/DRPicons-webfont.ttf') format('truetype'),
+       url('./fonts/DRPicons/DRPicons-webfont.svg#webfontregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icons-controls {
+  font-family: 'DRPicons' !important;
+}

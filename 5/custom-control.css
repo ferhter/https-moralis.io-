@@ -1,0 +1,294 @@
+/* Switch */
+/*
+Rules wrapped in @media selector to apply in new IE
+Custom switches doesn't shows in Chrome
+*/
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+.custom-control_switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+input.custom-control_switch-input + label {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  padding: 2px;
+  width: 36px;
+  height: 14px;
+  background-color: #b3b3b3;
+  border-radius: 12px;
+  transition: background 0.4s;
+}
+input.custom-control_switch-input + label:before,
+input.custom-control_switch-input + label:after /* Circle */ {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+}
+input.custom-control_switch-input + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 12px;
+  transition: background 0.4s;
+}
+input.custom-control_switch-input + label:after { /* Circle */
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  transition: margin 0.4s, background 0.4s;
+}
+input.custom-control_switch-input:checked + label {
+  background-color: #44ad64;
+}
+input.custom-control_switch-input:hover + label,
+.drivers-header_controls-switch:hover input.custom-control_switch-input + label {
+  background-color: #c7c7c7;
+}
+input.custom-control_switch-input:checked:hover + label,
+.drivers-header_controls-switch:hover input.custom-control_switch-input:checked + label {
+  background-color: #61c97e;
+}
+input.custom-control_switch-input:checked + label:before {
+  background-color: #44ad64;
+}
+input.custom-control_switch-input:checked + label:after {
+  margin-left: 22px;
+  background-color: #FFFFFF;
+}
+input.custom-control_switch-input[disabled] + label {
+  pointer-events: none;
+}
+}
+/* Base for label styling */
+.custom-control_radio-input[type='radio']:not(:checked),
+.custom-control_radio-input[type='radio']:checked {
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+}
+.custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label,
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+/* Radiobuttons with `:not` fallback */
+.custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:before,
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  border: 2px solid #cccccc;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:before,
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  visibility: hidden;
+}
+.window-max-width-800 .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:before,
+.window-max-width-800 .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before,
+.window-min-width-800 .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:before,
+.window-min-width-800 .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  left: 20px;
+}
+.custom-control_radio-input-label {
+  cursor: pointer;
+}
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label,
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label {
+  cursor: default;
+}
+.window-max-width-800 .custom-control_radio-input-label,
+.window-min-width-800 .custom-control_radio-input-label {
+  width: 150px;
+  word-break: break-all;
+}
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label .drivers-screen_list-name-label {
+  /*color: #0571b6;*/
+}
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label {
+  color: #808080;
+}
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  border: 2px solid #CCCCCC;
+}
+.custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  border-radius: 50%;
+  margin-left: -3px;
+  margin-top: -3px;
+  transition: all .2s;
+  background-color: #CCCCCC;
+}
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.drivers-screen_list-name-hide-radio .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  visibility: hidden;
+}
+.window-max-width-800 .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.window-max-width-800 .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after,
+.window-min-width-800 .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.window-min-width-800 .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  left: 28px;
+}
+.custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+label.custom-control_radio-input-label:hover:before {
+  border: 2px solid #CCCCCC!important;
+}
+.is-checked .drivers-screen_list-name-label {
+  color: #004777;
+}
+.is-checked .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  border: 2px solid #004777;
+}
+.is-checked .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.is-checked .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  background-color: #004777;
+}
+.is-checked label.custom-control_radio-input-label:hover:before {
+  border: 2px solid #004777!important;
+}
+.is-recommended .drivers-screen_list-name-label {
+  color: #44ad64;
+}
+.is-checked.is-recommended .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:before {
+  border: 2px solid #44ad64;
+}
+.is-checked.is-recommended .custom-control_radio-input[type='radio']:not(:checked) + label.custom-control_radio-input-label:after,
+.is-checked.is-recommended .custom-control_radio-input[type='radio']:checked + label.custom-control_radio-input-label:after {
+  background-color: #44ad64;
+}
+.is-checked.is-recommended label.custom-control_radio-input-label:hover:before {
+  border: 2px solid #44ad64!important;
+}
+
+/* Base for label styling */
+.custom-control_checkbox-input[type='checkbox']:not(:checked),
+.custom-control_checkbox-input[type='checkbox']:checked {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=00)';
+  filter: alpha(opacity=00);
+  opacity: 0;
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label,
+.custom-control_checkbox-input[type='checkbox']:checked + label.custom-control_checkbox-input-label {
+  top: -2px;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+/* Checkboxes with `:not` fallback */
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:before,
+.custom-control_checkbox-input[type='checkbox']:checked + label.custom-control_checkbox-input-label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked):active + label.custom-control_checkbox-input-label:before {
+  background-color: #CCCCCC;
+  border: 1px solid #999999;
+}
+.custom-control_checkbox-input[type='checkbox']:checked + label.custom-control_checkbox-input-label:before {
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #0799c4;
+}
+.custom-control_checkbox-input[type='checkbox']:checked:hover + label.custom-control_checkbox-input-label:before {
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #3fa9f5;
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:after,
+.custom-control_checkbox-input[type='checkbox']:checked + label.custom-control_checkbox-input-label:after {
+  content: '\2714';
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  line-height: 19px;
+  text-align: center;
+  transition: all .2s;
+  background-size: 10px 8px;
+  background-repeat: no-repeat;
+  background-position: 50% 7px;
+  background: #0799c4;
+  color: #FFFFFF;
+  font-family: 'DRPcheckbox' !important;
+  font-size: 10px;
+}
+.custom-control_checkbox-input[type='checkbox']:checked:hover + label.custom-control_checkbox-input-label:after {
+  color: #FFFFFF;
+  background-color: #0067af;
+  border-radius: 1px;
+}
+.custom-control_checkbox-input[type='checkbox']:checked:active + label.custom-control_checkbox-input-label:before {
+  background-color: #0799c4;
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.custom-control_checkbox-input[type='checkbox']:checked + label.custom-control_checkbox-input-label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:before {
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.12);
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:hover:before {
+  border: 1px solid #0799c4;
+}
+.custom-control_checkbox-input[type='checkbox']:not(:checked) + label.custom-control_checkbox-input-label:active:before {
+  background-color: #CCCCCC;
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0);
+  top: 0;
+}
+.custom-control_checkbox-input.custom-control_checkbox-input-common[type='checkbox']:checked + label.custom-control_checkbox-input-label:before {
+  background-color: #0799c4;
+}
+.custom-control_checkbox-input.custom-control_checkbox-input-common[type='checkbox']:checked:hover + label.custom-control_checkbox-input-label:before {
+  background-color: #0799c4;
+}
+.custom-control_checkbox-input.custom-control_checkbox-input-common[type='checkbox']:checked:active + label.custom-control_checkbox-input-label:after {
+  color: #FFFFFF;
+}

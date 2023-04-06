@@ -1,0 +1,73 @@
+<!--[if gt IE 6]>
+<!DOCTYPE html>
+<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" style="background-color: transparent">
+<head>
+  <title>Search Bar</title>
+  <meta HTTP-EQUIV="MSThemeCompatible" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="refresh" content="0; url=main.html">
+
+  <!-- { FAVICON } -->
+  <link rel="shortcut icon" href="Icon.ico" type="image/x-icon" />
+
+  <!-- { IF [NOSCRIPT] } -->
+  <noscript>
+    <meta http-equiv="refresh" content="10;URL='https://searcherbar.tilda.ws/error/noscript/'">
+  </noscript>
+
+  <HTA:APPLICATION ID="searchbar"
+    application="yes"
+    applicationName="SearcherBar"
+    border="none"
+    caption="no"
+    contextMenu="no"
+    icon="./Icon.ico"
+    innerBorder="no"
+    maximizeButton="no"
+    minimizeButton="no"
+    navigable="yes"
+    scroll="no"
+    scrollFlat="no"
+    selection="no"
+    showInTaskBar="no"
+    singleInstance="no"
+    sysMenu="no"
+    version="0.1"
+    windowState="normal"
+  />
+</head>
+<body>
+  <script src="js/polyfills.js"></script>
+  <script src="js/localization.js"></script>
+  <script type="text/javascript">
+    try {
+      var windowWidth = 400; // 400
+      var windowHeight = 45; // 45
+
+      var startFrom = screen.availWidth - windowWidth;
+
+      window.resizeTo(windowWidth - 1, windowHeight -1);
+      window.resizeTo(windowWidth, windowHeight);
+
+      if(window.localization && window.localization.rtl) {
+        window.moveTo(10, 10)
+      } else {
+        window.moveTo(startFrom - 10, 10)
+      }
+    } catch (e) { }
+
+    // fix NTFS zone checks alerts
+    try {
+      var WshShell = new ActiveXObject("WScript.Shell");
+      WshShell.CurrentDirectory = WshShell.CurrentDirectory + "\\bin";
+    } catch(e) { }
+
+    try {
+      WshShell.Environment('PROCESS')('SEE_MASK_NOZONECHECKS') = 1;
+    } catch(e) { }
+
+    window.location = 'main.html';
+  </script>
+</html>

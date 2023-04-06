@@ -1,0 +1,94 @@
+
+***
+
+2023-03-03 19:38:25.326000 UTC - [(null) 10444: Main Thread]: I/Logger Opening log
+2023-03-03 19:38:26.260000 UTC - [Parent 10444: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-03 19:38:26.260000 UTC - [Parent 10444: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-04 00:46:42.382000 UTC - [(null) 13124: Main Thread]: I/Logger Opening log
+2023-03-04 00:46:56.755000 UTC - [Parent 13124: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-04 00:46:56.756000 UTC - [Parent 13124: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+2023-03-04 00:46:59.798000 UTC - [Parent 13124: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-04 00:46:59.798000 UTC - [Parent 13124: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: another instance is running
+
+***
+
+2023-03-04 15:20:38.793000 UTC - [(null) 13136: Main Thread]: I/Logger Opening log
+2023-03-04 15:20:39.313000 UTC - [Parent 13136: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-04 15:20:39.313000 UTC - [Parent 13136: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-04 21:46:42.387000 UTC - [(null) 44068: Main Thread]: I/Logger Opening log
+2023-03-04 21:46:42.739000 UTC - [Parent 44068: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-04 21:46:42.743000 UTC - [Parent 44068: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-05 15:56:05.103000 UTC - [(null) 7912: Main Thread]: I/Logger Opening log
+2023-03-05 15:56:05.760000 UTC - [Parent 7912: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-05 15:56:05.762000 UTC - [Parent 7912: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+2023-03-05 15:56:21.246000 UTC - [Parent 7912: Main Thread]: D/Dump console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 237))
+
+***
+
+2023-03-05 18:53:01.032000 UTC - [(null) 3216: Main Thread]: I/Logger Opening log
+2023-03-05 18:53:01.301000 UTC - [Parent 3216: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-05 18:53:01.301000 UTC - [Parent 3216: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-06 01:46:42.816000 UTC - [(null) 12356: Main Thread]: I/Logger Opening log
+2023-03-06 01:46:43.130000 UTC - [Parent 12356: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-06 01:46:43.130000 UTC - [Parent 12356: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-06 15:46:44.767000 UTC - [(null) 6952: Main Thread]: I/Logger Opening log
+2023-03-06 15:46:45.307000 UTC - [Parent 6952: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-06 15:46:45.309000 UTC - [Parent 6952: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-06 23:43:57.805000 UTC - [(null) 11976: Main Thread]: I/Logger Opening log
+2023-03-06 23:43:58.161000 UTC - [Parent 11976: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-06 23:43:58.163000 UTC - [Parent 11976: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-07 14:59:36.559000 UTC - [(null) 2448: Main Thread]: I/Logger Opening log
+2023-03-07 14:59:37.217000 UTC - [Parent 2448: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-07 14:59:37.219000 UTC - [Parent 2448: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-07 19:46:43.170000 UTC - [(null) 856: Main Thread]: I/Logger Opening log
+2023-03-07 19:46:43.642000 UTC - [Parent 856: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-07 19:46:43.645000 UTC - [Parent 856: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-08 03:02:28.991000 UTC - [(null) 24128: Main Thread]: I/Logger Opening log
+2023-03-08 03:02:29.640000 UTC - [Parent 24128: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-08 03:02:29.643000 UTC - [Parent 24128: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+2023-03-08 03:02:30.327000 UTC - [Parent 24128: Main Thread]: D/Dump console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 237))
+
+***
+
+2023-03-08 14:55:32.586000 UTC - [(null) 11024: Main Thread]: I/Logger Opening log
+2023-03-08 14:55:33.160000 UTC - [Parent 11024: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-08 14:55:33.166000 UTC - [Parent 11024: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-08 18:39:51.192000 UTC - [(null) 13700: Main Thread]: I/Logger Opening log
+2023-03-08 18:39:52.692000 UTC - [Parent 13700: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-08 18:39:52.696000 UTC - [Parent 13700: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate
+
+***
+
+2023-03-08 23:46:42.285000 UTC - [(null) 19052: Main Thread]: I/Logger Opening log
+2023-03-08 23:46:42.678000 UTC - [Parent 19052: Main Thread]: D/Dump [Backstage.Dump] console.error: BackgroundUpdate: 
+2023-03-08 23:46:42.681000 UTC - [Parent 19052: Main Thread]: D/Dump [Backstage.Dump]   runBackgroundTask: backgroundupdate

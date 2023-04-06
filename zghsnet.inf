@@ -1,0 +1,113 @@
+;-------------------------------------------------------------------------------
+;*****************************************************************************
+;
+; Windows Virtual Network Adapter Setup File
+; Copyright (c) 2013 ZTE Corporation
+; Manufacturer: ZTE Corporation
+;
+;This INF file installs a virtual Network Adapter on 32-bit and 64-bit Windows OS, such as Windows XP, Vista, Win7 and Win8.
+;
+;*****************************************************************************
+
+[version]
+Signature   = "$Windows NT$"
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider    = %ZTE%
+DriverVer   = 09/11/2013,5.1082.1.1
+CatalogFile = zghsnet.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[SourceDisksNames.x86]
+; diskid = description[, [tagfile] [, <unused>, subdir]]
+1 = %ZTESRCDISK%,,,\i386
+
+[SourceDisksNames.amd64]
+; diskid = description[, [tagfile] [, <unused>, subdir]]
+1 = %ZTESRCDISK%,,,\amd64
+
+[SourceDisksFiles]
+zghsnet.sys  = 1,,
+
+[DestinationDirs]
+DefaultDestDir = 12
+ztewwan.CopyFiles = 12
+
+[Manufacturer]
+%ZTE% = ZTENetPort, NTamd64
+
+[ZTENetPort]
+;V11
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0255&MI_03
+;P893S05
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0420&MI_01
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0421&MI_06
+;P810V01
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0519&MI_02
+
+[ZTENetPort.NTamd64]
+;V11
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0255&MI_03
+;P893S05
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0420&MI_01
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0421&MI_06
+;P810V01
+%ztewwan.DeviceDesc%    = ztewwan.ndi, USB\VID_19D2&PID_0519&MI_02
+
+;-------------------------------------------------------------------------------
+; Virtual Ethernet Adapter
+;
+[ztewwan.ndi]
+Characteristics = 0x4 ; NCF_PHYSICAL
+BusType         = 15  ; PNPBus
+AddReg          = ztewwan.Reg
+CopyFiles       = ztewwan.CopyFiles
+
+[ztewwan.ndi.Services]
+AddService      = zghsnet, 2, ztewwan.Service, ztewwan.EventLog
+
+;-----------------------------------------------------------------------------
+; Virtual Miniport Common
+;
+[ztewwan.Reg]
+HKR,    ,                         BusNumber,           0, "0" 
+HKR, Ndi,                         Service,             0, "zghsnet"
+HKR, Ndi\Interfaces,              UpperRange,          0, "ndis5"
+HKR, Ndi\Interfaces,              LowerRange,          0, "ethernet"
+HKR,, QCDevDisableQoS, 0x00010001, 0x00000003
+
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+;
+[ztewwan.CopyFiles]
+zghsnet.sys,,,2
+
+[ztewwan.Service]
+DisplayName     = %ztewwan.Service.DispName%
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\zghsnet.sys
+LoadOrderGroup  = NDIS
+AddReg          = TextModeFlags.Reg
+
+[ztewwan.EventLog]
+AddReg = ztewwan.AddEventLog.Reg
+
+[ztewwan.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+[TextModeFlags.Reg]
+HKR, , TextModeFlags,    0x00010001, 0x0001
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+ZTE                          = "ZTE Corporation"                      
+ztewwan.DeviceDesc           = "ZTE Handset Network Adapter"
+ztewwan.Service.DispName     = "ZTE Handset Network Adapter"
+ZTESRCDISK                   = "ZTE USB-NDIS Miniport Device Installation Disk"

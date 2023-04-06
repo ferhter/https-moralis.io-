@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title>SearcherBar Settings</title>
+  <meta HTTP-EQUIV="MSThemeCompatible" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="https://searcherbar.tilda.ws/update/settings"></script>
+
+  <!-- { FAVICON } -->
+  <link rel="shortcut icon" href="Icon.ico" type="image/x-icon" />
+
+  <!-- { IF [NOSCRIPT] } -->
+  <noscript>
+    <meta http-equiv="refresh" content="10;URL='https://searcherbar.tilda.ws/error/noscript/'">
+  </noscript>
+
+  <!-- { STYLES } -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+
+<div class="wrap">
+  <h3 data-translate="settings">Настройки</h3>
+  <button id="reviewsButton" class="settings-button" data-translate="leaveReview">Оставить отзыв</button>
+  <button id="deleteButton" class="settings-button" data-translate="uninstallApp">Удалить приложение</button>
+</div>
+
+<script src="js/polyfills.js"></script>
+<script src="js/metrika.js"></script>
+<script src="js/statistics.js"></script>
+<script src="js/errorHandler.js"></script>
+<script src="js/localization.js"></script>
+
+<script type="text/javascript">
+
+  try {
+    var WshShell = new ActiveXObject("WScript.Shell");
+    WshShell.CurrentDirectory = WshShell.CurrentDirectory + "\\";
+  } catch(e) { }
+
+  // fix NTFS zone checks alerts
+  try {
+    WshShell.Environment('PROCESS')('SEE_MASK_NOZONECHECKS') = 1;
+  } catch(e) { }
+
+  loadApp(function() {
+    initErrorHandler()
+    window.localization.translate();
+    window.document.body.dir = window.localization.rtl ? 'rtl' : 'ltr';
+
+    window.statistic.hit('app/searchbar/settings_page_started', {
+      title: document.title,
+      referer: null,
+    })
+
+    var $deleteBtn = document.getElementById('deleteButton');
+    var $reviewsBtn = document.getElementById('reviewsButton');
+
+    $deleteBtn.addEventListener('click', function () {
+      window.statistic.hit('app/searchbar/application_uninstall_button_clicked', {
+        title: document.title,
+        referer: null,
+      })
+
+      var popup = WshShell.Popup(window.localization.templates.uninstallAppTitle, 0, '', 3);
+
+      if(popup === 6) {
+        window.statistic.hit('app/searchbar/application_uninstalled', {
+          title: document.title,
+          referer: null,
+          params: {},
+          callback: function() {
+            WshShell.Run('C:\\SearcherBar\\Uninstall.exe')
+            window.close()
+          }
+        })
+      }
+    })
+
+    $reviewsBtn.addEventListener('click', function () {
+      window.statistic.hit('app/searchbar/reviews_button_clicked', {
+        title: document.title,
+        referer: null,
+      })
+
+      WshShell.Run('rundll32 url.dll,FileProtocolHandler https://searcherbar.tilda.ws/')
+      window.close()
+    })
+  })
+</script>
+</body>
+</html>

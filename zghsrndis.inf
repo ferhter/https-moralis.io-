@@ -1,0 +1,224 @@
+;
+; Remote NDIS template device setup file
+; Copyright (c) Microsoft Corporation
+;
+; This is the template for the INF installation script
+; for the RNDIS-over-USB host driver.
+; This INF works for Windows XP SP2, Windows XP x64,
+; Windows Server 2003 SP1 x86, x64, and ia64, and
+; Windows Vista x86 and x64.
+; This INF will work with Windows XP, Windows XP SP1,
+; and Windows 2003 after applying specific hotfixes.
+;
+; Hacked for Linux by Michal Nazarewicz <mina86@mina86.com>
+; No, I do not understand this file, don't blame me if it
+; does not work...  Original found at:
+; <http://msdn.microsoft.com/en-us/library/ff570620.aspx>.
+; Thanks to Xiaofan Chen for pointing to this template.
+;
+
+[Version]
+Signature           = "$Windows NT$"
+Class               = Net
+ClassGUID           = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider            = %ZTE%
+DriverVer           = 02/24/2014,6.0.6000.16384
+CatalogFile         = zghsrndis.cat
+
+[Manufacturer]
+%ZTE%             = RndisDevices,NTx86,NTamd64,NTia64
+
+; Decoration for x86 architecture
+[RndisDevices.NTx86]
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1365
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1364&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1373&MI_00
+;TD U960
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0230&MI_00
+;V11
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0246&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0247&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0253&MI_00
+;P943A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0302&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0329
+;N9130
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0319&MI_00
+;P772A12
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0308&MI_00
+;T9
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;T98
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0264&MI_00
+;U788
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0297
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0298&MI_00
+;U788+
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0353&MI_00
+;U830
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0240
+;U880
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;U970
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0288&MI_00
+;U795
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0336
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0337&MI_00
+;U885
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0369&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0370&MI_00
+;P940A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0344&MI_00
+;V96A
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0400&MI_00
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0401&MI_00
+;ZTE Mobile
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffe0&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffdf&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd9&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd8&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd7&MI_00
+
+; Decoration for x64 architecture
+[RndisDevices.NTamd64]
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1364&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1365
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1373&MI_00
+;TD U960
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0230&MI_00
+;V11
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0246&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0247&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0253&MI_00
+;P943A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0302&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0329
+;N9130
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0319&MI_00
+;P772A12
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0308&MI_00
+;T9
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;T98
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0264&MI_00
+;U788
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0297
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0298&MI_00
+;U788+
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0353&MI_00
+;U830
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0240
+;U880
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;U970
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0288&MI_00
+;U795
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0336
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0337&MI_00
+;U885
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0369&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0370&MI_00
+;P940A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0344&MI_00
+;V96A
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0400&MI_00
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0401&MI_00
+;ZTE Mobile
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffe0&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffdf&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd9&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd8&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd7&MI_00
+
+
+; Decoration for ia64 architecture
+[RndisDevices.NTia64]
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1364&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1365
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1373&MI_00
+;TD U960
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0230&MI_00
+;V11
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0246&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0247&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0253&MI_00
+;P943A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0302&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0329
+;N9130
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0319&MI_00
+;P772A12
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0308&MI_00
+;T9
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;T98
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0264&MI_00
+;U788
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0297
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0298&MI_00
+;U788+
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19D2&PID_0353&MI_00
+;U830
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0240
+;U880
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_1385&MI_00
+;U970
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0288&MI_00
+;U795
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0336
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0337&MI_00
+;U885
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0369&MI_00
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0370&MI_00
+;P940A10
+%RndisDevice%       = RNDIS.NT.5.1, USB\VID_19d2&PID_0344&MI_00
+;V96A
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0400&MI_00
+%ZTERndisDevice%    = RNDIS.NT.5.1, USB\VID_19d2&PID_0401&MI_00
+;ZTE Mobile
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffe0&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffdf&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd9&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd8&MI_00
+%ZTEMobileRndis%    = RNDIS.NT.5.1, USB\VID_19d2&PID_ffd7&MI_00
+
+
+;@@@ This is the common setting for setup
+[ControlFlags]
+ExcludeFromSelect=*
+
+; DDInstall section
+; References the in-build Netrndis.inf
+[RNDIS.NT.5.1]
+Characteristics     = 0x84   ; NCF_PHYSICAL + NCF_HAS_UI
+BusType             = 15
+; NEVER REMOVE THE FOLLOWING REFERENCE FOR NETRNDIS.INF
+include             = netrndis.inf
+needs               = Usb_Rndis.ndi
+AddReg              = Rndis_AddReg_Vista
+
+; DDInstal.Services section
+[RNDIS.NT.5.1.Services]
+include             = netrndis.inf
+needs               = Usb_Rndis.ndi.Services
+
+; Optional registry settings. You can modify as needed.
+[RNDIS_AddReg_Vista]
+HKR, NDI\params\VistaProperty, ParamDesc,  0, %Vista_Property%
+HKR, NDI\params\VistaProperty, type,       0, "edit"
+HKR, NDI\params\VistaProperty, LimitText,  0, "12"
+HKR, NDI\params\VistaProperty, UpperCase,  0, "1"
+HKR, NDI\params\VistaProperty, default,    0, " "
+HKR, NDI\params\VistaProperty, optional,   0, "1"
+
+; No sys copyfiles - the sys files are already in-build
+; (part of the operating system).
+; We do not support XP SP1-, 2003 SP1-, ME, 9x.
+
+; Modify these strings for your device as needed.
+[Strings]
+ZTE                 = "ZTE Corporation"
+RndisDevice         = "Remote NDIS based Internet Sharing Device"
+ZTERndisDevice      = "ZTE Remote NDIS Network Sharing Device"
+Vista_Property      = "Optional Vista Property"
+ZTEMobileRndis      = "USB Ethernet/RNDIS Gadget"

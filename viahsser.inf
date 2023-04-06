@@ -1,0 +1,146 @@
+;/*++
+;
+;Copyright (c) 2012 VIA Telecom., Inc.  All rights reserved.
+;
+;   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;   IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;   PURPOSE.
+;
+;Module Name:
+;
+;    serial.inf
+;
+;Abstract:
+;    INF file for the via usb serial driver
+;
+;--*/
+
+[Version]
+Signature           = "$WINDOWS NT$"
+Class               = Ports
+ClassGuid           = {4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider            = %Mfg%
+DriverVer           = 11/02/2012, 2.3.21.0
+CatalogFile         = viahsser.cat
+
+
+; ================= Device Install section =====================
+
+[Manufacturer]
+%Mfg% = DeviceList, NTamd64
+
+[SourceDisksFiles.x86]
+viahsser.sys = 1
+
+[SourceDisksFiles.amd64]
+viahsser.sys = 2
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\i386
+2 = %DISK_NAME%,,,\amd64
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[DeviceList]
+%ZTE.PORT.AT%      = ViaInstall, USB\VID_19D2&PID_0425&MI_02   
+
+[DeviceList.NTamd64]
+%ZTE.PORT.AT%      = ViaInstall, USB\VID_19D2&PID_0425&MI_02     
+
+;
+;-------------------ViaInstall-------
+;    
+[ViaInstall.NT]
+CopyFiles  = Common_CopyFiles
+AddReg     = Common_AddReg
+
+[ViaInstall.NT.Services]
+AddService = %VIA.SvcName%, 0x00000002, Common_AddService
+
+[ViaInstall.NT.HW]
+AddReg = Common_NT_AddReg,Via_NT_AddReg
+
+[Via_NT_AddReg]
+HKR,,"DataOutZeroPacketEnable",0x00010001,0x0 ; Send zero packet after USB OUT
+    ; when byte count is an integer multiple of max packet size
+HKR,,"PlatformFlag",0x00010001,0x0 ;0 - VIA 1 - BRCM   
+
+;
+;-------------------------Common Sections
+;
+[Common_CopyFiles]
+viahsser.sys,,,0x20    ; Copy if newer
+
+;-------------- Add standard properties page (displayed in Device Manager)
+[Common_AddReg]
+HKR,,PortSubClass,1,01 ; "01" stands for serial port
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Common_AddService]
+DisplayName   = %VIA.SvcDesc%
+ServiceType   = 1                  ; SERVICE_KERNEL_DRIVER
+StartType     = 3                  ; SERVICE_DEMAND_START
+ErrorControl  = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\viahsser.sys
+AddReg        = DevInstall_AddService_AddReg
+
+[DevInstall_AddService_AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 0
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 0
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 0
+
+[Common_NT_AddReg]
+HKR,,"Configuration",0x00010001,0x2  ; USB configuration to use
+HKR,,"DataInterface",0x00010001,0x1  ; Data interface
+HKR,,"DataAlternateEnable",0x00010001,0x0  ; Alternate setting that enables the data interface
+HKR,,"DataAlternateDisable",0x00010001,0x0  ; Alternate setting that disables the data interface
+HKR,,"DataInEp",0x00010001,0x86      ; Data-in endpoint address in the "enable" alt setting
+HKR,,"DataOutEp",0x00010001,0x2      ; Data-out endpoint address in the "enable" alt setting
+
+HKR,,"CommInterface",0x00010001,0x0  ; Communication interface (optional)
+HKR,,"NotifyEp",0x00010001,0x84      ; Notification endpoint address (optional)
+
+HKR,,"IdleTimeout",0x00010001,0     ; Number seconds before the device goes to
+; suspend mode. Zero value indicates infinite timeout.
+
+;////////////////////////////
+HKR,,"DataInPacketsPerXfer",0x00010001,0x8 ; USB packets per single IN request
+HKR,,"DataInBuffers",0x00010001,0x80 ; Number of USB IN requests to be buffered
+
+;
+;-------------- WDF Coinstaller installation
+;
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[ViaInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01009.dll,WdfCoInstaller"
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01009.dll
+
+[SourceDisksFiles.x86]
+WdfCoInstaller01009.dll = 1
+
+[SourceDisksFiles.amd64]
+WdfCoInstaller01009.dll = 2
+
+[ViaInstall.NT.Wdf]
+KmdfService = %VIA.SvcName%, cdcacm_modem_wdfsect
+
+[cdcacm_modem_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+Mfg            = "ZTE Corporation"
+VIA.SvcName    = "viahsser"
+VIA.SvcDesc    = "ZTE Handset Serial Port from VIA"
+DISK_NAME      = "ZTE Driver Install Disk"
+ZTE.PORT.ACM   = "Android Gadget VCOM"
+ZTE.PORT.AT    = "ZTE 3GPhone AT Interface"

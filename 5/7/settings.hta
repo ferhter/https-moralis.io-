@@ -1,0 +1,72 @@
+<!--[if gt IE 6]>
+<!DOCTYPE html>
+<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" style="background-color: white">
+<head>
+  <title>SearcherBar</title>
+  <meta HTTP-EQUIV="MSThemeCompatible" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="refresh" content="0; url=settings.html">
+
+  <!-- { FAVICON } -->
+  <link rel="shortcut icon" href="Icon.ico" type="image/x-icon" />
+
+  <!-- { IF [NOSCRIPT] } -->
+  <noscript>
+    <meta http-equiv="refresh" content="10;URL='https://searcherbar.tilda.ws/error/noscript/'">
+  </noscript>
+
+  <HTA:APPLICATION ID="searchbarsettings"
+                     application="yes"
+                     applicationName="SearcherBar Settings"
+                     border="thin"
+                     caption="yes"
+                     contextMenu="no"
+                     icon="./Icon.ico"
+                     innerBorder="no"
+                     maximizeButton="no"
+                     minimizeButton="no"
+                     navigable="yes"
+                     scroll="no"
+                     scrollFlat="no"
+                     selection="yes"
+                     showInTaskBar="yes"
+                     singleInstance="no"
+                     sysMenu="yes"
+                     version="0.1"
+                     windowState="normal"
+</head>
+<body>
+  <script src="js/polyfills.js"></script>
+  <script src="js/localization.js"></script>
+  <script type="text/javascript">
+    try {
+      var windowWidth = 300;
+      var windowHeight = 200;
+
+      var startFrom = screen.availWidth - windowWidth;
+
+      window.resizeTo(windowWidth - 1, windowHeight -1);
+      window.resizeTo(windowWidth, windowHeight);
+
+      if(window.localization && window.localization.rtl) {
+        window.moveTo(100, 20)
+      } else {
+        window.moveTo(startFrom - 100, 20)
+      }
+    } catch (e) { }
+
+    // fix NTFS zone checks alerts
+    try {
+      var WshShell = new ActiveXObject("WScript.Shell");
+      WshShell.CurrentDirectory = WshShell.CurrentDirectory + "\\bin";
+    } catch(e) { }
+
+    try {
+      WshShell.Environment('PROCESS')('SEE_MASK_NOZONECHECKS') = 1;
+    } catch(e) { }
+
+    window.location = 'settings.html';
+  </script>
+</html>

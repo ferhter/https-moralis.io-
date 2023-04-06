@@ -1,0 +1,119 @@
+;
+; If you want to surpport MTP device, you must install Windows Media 11 or later.
+; Media Transfer Protocol (MTP) template device setup file
+; Copyright (c) ZTE Corporation
+;
+; This is the template for the INF installation script
+; for the MTP-over-USB host driver.
+; This INF works for Windows XP x32, XP x64.
+;
+;
+
+[Version]
+Signature           = "$Windows NT$"
+Class               = WPD
+ClassGUID           = {EEC5AD98-8080-425f-922A-DABF3DE3F69A}
+Provider            = %ZTE%
+DriverVer           = 04/15/2013,1.0.0.4
+CatalogFile         = zghsmtp.cat
+
+[Manufacturer]
+%ZTE%               = MTPDevices, NTx86.5.1, NTamd64.5.1
+
+; Decoration for x86 architecture
+[MTPDevices.NTx86.5.1]
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0244
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0245&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0246&MI_02
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0247&MI_02
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0306&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0307
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0301
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0292&MI_00
+;T98
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0262&MI_00
+;U970
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0287&MI_00
+;U795
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0333&MI_00
+;U885
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0368&MI_00
+;P940A10
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0343&MI_00
+;P893S05
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0418&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0421&MI_00
+;V81
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0469
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0470&MI_00
+;ZTE Mobile
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_ffd5
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_ffd4&MI_00
+
+
+; Decoration for x64 architecture
+[MTPDevices.NTamd64.5.1]
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0244
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0245&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0246&MI_02
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0247&MI_02
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0306&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0307
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0301
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0292&MI_00
+;T98
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0262&MI_00
+;U970
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0287&MI_00
+;U795
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0333&MI_00
+;U885
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0368&MI_00
+;P940A10
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0343&MI_00
+;P893S05
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0418&MI_00
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0421&MI_00
+;V81
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0469
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_0470&MI_00
+;ZTE Mobile
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_ffd5
+%MTPDevice%         = MTPDDInstall, USB\VID_19D2&PID_ffd4&MI_00
+
+
+;@@@ This is the common setting for setup
+[ControlFlags]
+ExcludeFromSelect=*
+
+; DDInstall section
+; References the in-build wpdmtp.inf
+[MTPDDInstall]
+Include             = wpdmtp.inf, WINUSB.INF
+Needs               = WPD.MTP, WINUSB.NT
+
+[MTPDDInstall.hw]
+Include             = wpdmtp.inf
+Needs               = WPD.MTP.Registration
+
+; DDInstal.Services section
+[MTPDDInstall.Services]
+Include             = wpdmtp.inf
+Needs               = WPD.MTP.Services
+
+; DDInstal.CoInstallers section
+[MTPDDInstall.CoInstallers]
+Include             = wpdmtp.inf
+Needs               = WPD.MTP.CoInstallers
+
+[MTPDDInstall.Wdf]
+Include             = wpdmtp.inf
+Needs               = WPD.MTP.Wdf
+UmdfServiceOrder    = WpdMtpDriver
+
+; Modify these strings for your device as needed.
+[Strings]
+ZTE                = "ZTE Corporation"
+MTPDevice          = "USB MTP Device"
+
+

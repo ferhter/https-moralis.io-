@@ -1,0 +1,461 @@
+;
+; Android WinUsb driver installation.
+;
+[Version]
+Signature           = "$Windows NT$"
+Class               = AndroidUsbDeviceClass
+ClassGuid           = {3F966BD9-FA04-4ec5-991C-D326973B5128}
+Provider            = %ProviderName%
+DriverVer           = 09/17/2015,2.0.0010.00003
+CatalogFile         = androidwinusb.cat
+
+;
+; This section seems to be required for WinUsb driver installation.
+; If this section is removed the installer will report an error
+; "Required section not found in INF file".
+;
+[ClassInstall32]
+Addreg = AndroidWinUsbClassReg
+
+[AndroidWinUsbClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-1
+
+[Manufacturer]
+%ProviderName% = Google, NTx86, NTamd64
+
+[Google]
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1350&MI_04
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1351&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1352
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1354&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1360&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1361&MI_01
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1362
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1363&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1366&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0398&MI_04
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0424&MI_01
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0425&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1364&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1373&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0228&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0229&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0230&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0241
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0245&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0247&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0248&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0249&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0253&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0255&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0292&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0260&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0295&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0302&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0303&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0306&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0308&MI_06
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0309&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0310&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0319&MI_04
+;T9
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0219&MI_00
+;T98
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0262&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0263&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0264&MI_02
+;U788
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0296&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0298&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0299&MI_00
+;U788+
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0351&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0352&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0353&MI_02
+;U830
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0238
+;U880
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1382&MI_03
+;U970
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0287&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0288&MI_02
+;U960D
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0291&MI_03
+;U795
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0333&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0335&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0337&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0361&MI_00
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0363&MI_01
+;U885
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0368&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0370&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0372&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0374&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0376&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0378&MI_02
+;P940A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0342&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0343&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0344&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0345&MI_01
+;V96A
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0401&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0402&MI_01
+;ZTE Mobile
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffbf&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe3&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe1
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdf&MI_03
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdb&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffda&MI_05
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd9&MI_07
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd7&MI_02
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd4&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd3&MI_06
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd2&MI_03
+;P893S05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0418&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0419&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0420&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0421&MI_08
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0500&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0501&MI_01
+;P864A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0423&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0432&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0433&MI_05
+;U930HD
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0450&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0451&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0452
+;V81
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0470&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0472&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0474&MI_01
+;P865V30
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0496&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0497&MI_01
+;P810V01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0519&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0522&MI_01
+;V37
+%ZTE_OtherAdbInterface%        = USB_Install, USB\VID_19D2&PID_1279&MI_01
+;P890A12
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D001
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D00D
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_4EE7
+
+[Google.NTx86]
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1350&MI_04
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1351&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1352
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1354&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1360&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1361&MI_01
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1362
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1363&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1366&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0398&MI_04
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0424&MI_01
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0425&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1364&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1373&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0228&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0229&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0230&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0241
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0245&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0247&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0248&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0249&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0253&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0255&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0292&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0260&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0295&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0302&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0303&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0306&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0308&MI_06
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0309&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0310&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0319&MI_04
+;T9
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0219&MI_00
+;T98
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0262&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0263&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0264&MI_02
+;U788
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0296&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0298&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0299&MI_00
+;U788+
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0351&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0352&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0353&MI_02
+;U830
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0238
+;U880
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1382&MI_03
+;U970
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0287&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0288&MI_02
+;U960D
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0291&MI_03
+;U795
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0333&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0335&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0337&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0361&MI_00
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0363&MI_01
+;U885
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0368&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0370&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0372&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0374&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0376&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0378&MI_02
+;P940A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0342&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0343&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0344&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0345&MI_01
+;V96A
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0401&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0402&MI_01
+;ZTE Mobile
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffbf&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe3&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe1
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdf&MI_03
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdb&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffda&MI_05
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd9&MI_07
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd7&MI_02
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd4&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd3&MI_06
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd2&MI_03
+;P893S05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0418&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0419&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0420&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0421&MI_08
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0500&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0501&MI_01
+;P864A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0423&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0432&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0433&MI_05
+;U930HD
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0450&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0451&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0452
+;V81
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0470&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0472&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0474&MI_01
+;P865V30
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0496&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0497&MI_01
+;P810V01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0519&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0522&MI_01
+;V37
+%ZTE_OtherAdbInterface%        = USB_Install, USB\VID_19D2&PID_1279&MI_01
+;P890A12
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D001
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D00D
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_4EE7
+
+[Google.NTamd64]
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1350&MI_04
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1351&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1352
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1354&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1360&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1361&MI_01
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1362
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1363&MI_02
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_1366&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0398&MI_04
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0424&MI_01
+%ZTE_CT_HandsetAdbVIA%         = USB_Install, USB\VID_19D2&PID_0425&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1364&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1373&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0228&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0229&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0230&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0241
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0245&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0247&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0248&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0249&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0253&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0255&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0292&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0260&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0295&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0302&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0303&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0306&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0308&MI_06
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0309&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0310&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0319&MI_04
+;T9
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0219&MI_00
+;T98
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0262&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0263&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0264&MI_02
+;U788
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0296&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0298&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0299&MI_00
+;U788+
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0351&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0352&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0353&MI_02
+;U830
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0238
+;U880
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_1382&MI_03
+;U970
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0287&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0288&MI_02
+;U960D
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0291&MI_03
+;U795
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0333&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0335&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0337&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0361&MI_00
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0363&MI_01
+;U885
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0368&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0370&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0372&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0374&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0376&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0378&MI_02
+;P940A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0342&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0343&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0344&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0345&MI_01
+;V96A
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0401&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0402&MI_01
+;ZTE Mobile
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffbf&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe3&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffe1
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdf&MI_03
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffdb&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffda&MI_05
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd9&MI_07
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd7&MI_02
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd4&MI_01
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd3&MI_06
+%ZTE_MobileAdbInterface%       = USB_Install, USB\VID_19D2&PID_ffd2&MI_03
+;P893S05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0418&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0419&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0420&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0421&MI_08
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0500&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0501&MI_01
+;P864A10
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0423&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0432&MI_04
+%ZTE_CT_HandsetAdbInterface%   = USB_Install, USB\VID_19D2&PID_0433&MI_05
+;U930HD
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0450&MI_05
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0451&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0452
+;V81
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0470&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0472&MI_01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0474&MI_01
+;P865V30
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0496&MI_02
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0497&MI_01
+;P810V01
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0519&MI_03
+%ZTE_HandsetAdbInterface%      = USB_Install, USB\VID_19D2&PID_0522&MI_01
+;V37
+%ZTE_OtherAdbInterface%        = USB_Install, USB\VID_19D2&PID_1279&MI_01
+;P890A12
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D001
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_D00D
+%ZTE_AdbInterface%             = USB_Install, USB\VID_18D1&PID_4EE7
+
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include     = winusb.inf
+AddService  = WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.Wdf]
+KmdfService = WINUSB, WinUSB_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion  = 1.9
+
+[USB_Install.HW]
+AddReg  = Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{F72FE0D4-CBCB-407d-8814-9ED673D0DD6B}"
+
+[USB_Install.CoInstallers]
+AddReg    = CoInstallers_AddReg
+CopyFiles = CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\i386
+2 = %DISK_NAME%,,,\amd64
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll  = 1
+WdfCoInstaller01009.dll = 1
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll  = 2
+WdfCoInstaller01009.dll = 2
+
+[Strings]
+ProviderName                = "Google, Inc."
+WinUSB_SvcDesc              = "Android USB Driver"
+DISK_NAME                   = "Android WinUsb installation disk"
+ClassName                   = "Android Device"
+
+ZTE_HandsetAdbInterface     = "ZTE Handset ADB Interface"
+ZTE_OtherAdbInterface       = "ZTE Device ADB Interface"
+ZTE_CT_HandsetAdbVIA        = "ZTE 3GPhone ADB Interface"
+ZTE_CT_HandsetAdbInterface  = "CT_ZTE_3GPhone ADB Interface"
+ZTE_MobileAdbInterface      = "Android Sooner Single ADB Interface"
+ZTE_AdbInterface      	    = "Android ADB Interface"

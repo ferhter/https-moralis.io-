@@ -1,0 +1,748 @@
+/* FIX */
+html {
+    margin: 0px;
+    padding:0px;
+    background-color: white;
+    font-style:normal;
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    min-width: 600px;
+    background-color: #f7f6f3;
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    cursor: default;
+
+    overflow: hidden;
+
+    scrollbar-face-color: #E0DFDD;
+    scrollbar-base-color: #EBEBEB;
+    scrollbar-3dlight-color: #EBEBEB;
+    scrollbar-highlight-color: #EBEBEB;
+    scrollbar-track-color: #EBEBEB;
+    scrollbar-arrow-color: #3A4459;
+    scrollbar-shadow-color: #E0DFDD;
+    scrollbar-dark-shadow-color: #EBEBEB;
+}
+
+.template-loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #00456f;
+  background: linear-gradient(to right, #00456f 0%,#0ed7bf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00456f', endColorstr='#0ed7bf',GradientType=1 );
+}
+.template-loading-screen_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;
+  height: 65px;
+  margin: -33px auto auto -187px;
+  background: url('../img/screens/new-ui-logo2021.png') no-repeat;
+  _background:none;
+  background-size: contain;
+  _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/screens/new-ui-logo2021.png',sizingMethod='crop');
+}
+.bold {
+  font-family: 'Proxima Nova Semibold', 'Segoe UI Semibold', 'Open Sans', Arial, sans-serif;
+}
+#progress {
+    position:relative;
+    top: 0;
+    color:black;
+    text-align:center;
+    font-size:60px;
+}
+
+.right{
+    float:right;
+}
+.left {
+    float:left;
+}
+.ga-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+.display-none {
+  display: none;
+}
+
+/* { LEFT CHARMS BAR } */
+.ui1 .charms{
+    background-color: #222222;
+    width: 266px;
+    max-width:266px;
+    min-width:266px;
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom:10px;
+    padding-left:0px;
+    padding-right:0px;
+    height: 100%;
+    min-height: 600px;
+}
+
+.a{
+    text-decoration: none;
+}
+.a:hover{
+    text-decoration: underline;
+    background-color: red;
+}
+
+/* { CHARMS LOGO } */
+.charms_logo {
+/*    padding-left: 8px;
+    padding-right: 8px;*/
+    margin-bottom:15px;
+    float: left;
+}
+h2 {
+    color: white;
+    width: 150px;
+    float: left;
+    font-size: 18pt;
+    margin: 5px 0;
+}
+/* { Menu } */
+.ui1 .menu-e{
+    width:100%;
+    height:48px;
+    color:#222222;
+    cursor:pointer;
+    text-decoration: none;
+    font-size:0px;
+    float:left;
+    text-decoration: none;
+
+}
+.menu-e img{
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ui1 .menu-e i{
+    font-style: normal;
+    font-size:13pt;
+    position: relative;
+    bottom:18px;
+    color:white;
+}
+
+.ui1 .menu-e:hover{
+    background-color:#007701;
+    color:#007701;
+}
+.ui1 .menu-e:active{
+    background-color:black;
+}
+
+/* Bottom Menu */
+.ui1 #bottom-menu-line{
+    background-image: url('../img/charms/line.jpg');
+    background-repeat: repeat-x;
+    background-position: top;
+    /*width:200px;*/
+    color:#222222;
+    padding-right:200px;
+    font-size:1px;
+    height:10px;
+    margin-left: 30px;
+    margin-top:30px;
+
+}
+.ui1 .bottom-menu{
+    margin-top:10px;
+    width: 200px;
+    margin-left: 30px;
+}
+.bt-menu-e{
+    width:100%;
+    height:32px;
+    color:#222222;
+    cursor:pointer;
+    text-decoration: none;
+    font-size:0px;
+    float:left;
+    text-decoration: none;
+}
+
+.bt-menu-e img{
+    height: 24px;
+    width: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bt-menu-e i{
+    font-style: normal;
+    font-size:9pt;
+    position: relative;
+    bottom:10px;
+    left:10px;
+    color:white;
+}
+
+
+
+
+/* ICONS */
+
+/*#m-down{
+    background-image: url('../img/charms/download.png');
+    background-position: center center;
+}
+
+#m-setup{
+    background-image: url('../img/charms/setup.png');
+    background-position: center center;
+}
+
+#m-pc {
+    background-image: url('../img/charms/pc.png');
+    background-position: center center;
+}
+
+#m-apps{
+    background-image: url('../img/charms/apps.png');
+    background-position: center center;
+}
+#m-toolkit{
+    background-image: url('../img/charms/toolkit.png');
+    background-position: center center;
+}
+#m-reload{
+    background-image: url('../img/charms/reload-sm.png');
+    background-position: center center;
+}
+#m-store{
+    background-image: url('../img/charms/store.png');
+    background-position: center center;
+}
+#m-gears{
+    background-image: url('../img/charms/gears.png');
+    background-position: center center;
+}
+#m-help{
+    background-image: url('../img/charms/help.png');
+    background-position: center center;
+}
+*/#drv-sound{
+    background-image: url('../img/speaker.png');
+    background-position: center center;
+}
+#drv-wifi{
+    background-image: url('../img/wifi.png');
+    background-position: center center;
+}
+#drv-cam{
+    background-image: url('../img/cam.png');
+    background-position: center center;
+}
+#drv-generic{
+    background-image: url('../img/device-generic.png');
+    background-position: center center;
+}
+
+/*
+#m-reload{
+        background-image: url('../img/charms/reload-rm.png');
+        background-position: center center;
+}
+#m-reload{
+        background-image: url('../img/charms/reload-rm.png');
+        background-position: center center;
+}*/
+
+
+
+/* { APP-CONTAINER } */
+.main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 78%;
+    height: 100%;
+    border:none;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 10002;
+}
+.main tr{
+    border:none;
+}
+.main td{
+    border:none;
+}
+.chat-assistant-expert-table .main {
+  width: 100%;
+}
+#menu {
+    table-layout: fixed;
+    width: 266px;
+    padding: 0;
+}
+.ui1 .app-container{
+    color:black;
+    height:100%;
+    vertical-align: top;
+    margin:0px;
+    padding:0px;
+}
+.app-container_inner {
+    /*padding-top: 24px;*/
+    padding-bottom: 50px;
+    padding-left:32px;
+    padding-right:32px;
+}
+/* Change global style for title */
+.app-container-title {
+    font-size:18pt;
+    color:#252525;
+    padding-bottom: 10px;
+}
+.app-container a{
+    /* Remove global style for anchors */
+    /*color:#007701;*/
+    text-decoration: none;
+    cursor:pointer;
+}
+.app-container a:hover{
+    text-decoration: underline;
+}
+.ui1 .app-container .app-footer {
+    padding-top:32px;
+    padding-bottom: 32px;
+}
+button{
+    background: none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+.button{
+    margin: 0px;
+    width:250px;
+    height: 60px;
+    border-radius: 5px;
+    background: #006a7b; /* Old browsers */
+    background: linear-gradient(to right, #006a7b 0%,#00b4a8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006a7b', endColorstr='#00b4a8',GradientType=1 ); /* IE6-9 */
+    padding-top:8px;
+    padding-left:12px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    -ms-user-select: none;
+    user-select: none;
+}
+.button:active{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+/* { COMMON } */
+
+.ui1 .head-second {
+    padding-left: 35px;
+}
+.ui1 .items-list {
+    margin-top:24px;
+    margin-bottom:24px;
+    width:100%;
+    background: #e2e2e2;
+}
+.ui1 .items-list table{
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    border:none;
+    font-size:20px;
+}
+.ui1 .list-odd {
+    background: #ebebeb;
+}
+.ui1 .items-list .list-first{
+    width:25px;
+    height:32px;
+    padding-left: 16px;
+    vertical-align: top;
+}
+.ui1 .items-list .list-second{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 9pt;
+    vertical-align: top;
+}
+.ui1 .items-list .list-third{
+    font-size: 9pt;
+    width: 500px;
+}
+.ui1 .items-list .list-last{
+    width:50px;
+	white-space:nowrap;
+}
+.ui1 .list-third b{
+    margin-right: 10px;
+}
+.ui1 .list-first img{
+    float:right;
+    width:16px;
+    height:16px;
+}
+.ui1 .list-driver-icon {
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.items-list tr{
+    height:50px;
+}
+.positioning-for-header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+/* { DEBUG } */
+.red {
+    background-color: red;
+}
+
+.dbg {
+    background-color: #ff00ff;
+}
+
+.dbg2 {
+    background-color: #00ff00;
+}
+
+.ui1 .copyright {
+    position: fixed;
+    bottom: 20px;
+    color: white;
+    text-align: center;
+    width: 266px;
+}
+
+#progressDescription {
+	display:inline-table;
+	width:80%;
+}
+
+.ui1 #settings {
+	text-align:center;
+}
+
+.list_description {
+	display:inline-table;
+}
+
+#browse_logs {
+	width:100px;
+	height:30px;
+	font-size:12px;
+	margin-top:7px;
+}
+
+.cta-blue-btn,
+.cta-green-btn {
+  display: block;
+  border: none;
+  background: none;
+  color: white;
+  text-align: center;
+  line-height: 24px;
+  font-family: 'Proxima Nova Light', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: -0.4px;
+}
+.cta-green-btn {
+  min-width: 350px;
+  background-color: #078E97;
+}
+.cta-blue-btn {
+  background-color: #3fa9f5;
+}
+.cta-blue-btn:hover {
+  background-color: #3ca0e8;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.cta-blue-btn:active {
+  background-color: #51b1f5;
+  box-shadow: none;
+}
+.cta-blue-btn:focus,
+.cta-blue-btn::focus {
+  outline: none;
+  background-color: #3ca0e8;
+}
+.cta-btn-68 {
+  height: 60px;
+  font-size: 18px;
+  font-weight: normal;
+  overflow: visible;
+}
+.cta-btn-59 {
+  min-height: 35px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px 23px 12px 12px;
+  margin-right: 32px;
+  overflow: visible; /* old ie fix for padding */
+}
+.cta-btn-43 {
+  min-height: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 10px 30px;
+}
+/* .cta-green-btn:hover {
+  background-color: #003f7b;
+  background: linear-gradient(to right, #003f7b 0%,#0096b4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003f7b', endColorstr='#0096b4',GradientType=1 );
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.cta-green-btn:active {
+  background-color: #003f7b;
+  background: linear-gradient(to right, #003f7b 0%,#0096b4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003f7b', endColorstr='#0096b4',GradientType=1 );
+  box-shadow: none;
+} */
+.cta-green-btn:hover {
+  opacity: 0.8;
+}
+.cta-green-btn:focus,
+.cta-green-btn::focus {
+  outline: none;
+  background-color: #74BC7A;
+}
+.cta-green-btn-counter,
+.cta-green-btn-text b,
+.programs-list_head-btn-text b {
+  display: inline-block;
+  width: 32px;
+  font-weight: normal;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=40)';
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  text-align: center;
+}
+.cta-green-btn-text {
+  vertical-align: middle;
+}
+.cta-green-btn-is-loading {
+  position: relative;
+  background-color: #008f43;
+  border-color: #e0e0e0;
+  cursor: default;
+  pointer-events: none;
+  line-height: normal;
+
+  background-color: #E3E3E3;
+  cursor: default;
+  pointer-events: none;
+}
+.cta-green-btn-icon {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -13px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cta-green-btn-icon {
+  vertical-align: middle;
+}
+.cta-green-btn-clean-icon,
+.cta-green-btn-install-all-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.cta-green-btn-is-disabled,
+.cta-green-btn[disabled='disabled'] {
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+/* Program row single button */
+.installed-program_uninstall-single,
+.installed-program_uninstall-single-btn-filler {
+    min-width: 103px;
+    margin-top: 18px;
+    line-height: 1em;
+    padding: 8px 10px;
+    box-sizing: inherit;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #808080;
+    background-color: #f7f6f3;
+    overflow: visible; /* old ie fix for padding */
+}
+.installed-program_uninstall-single-btn-filler {
+  display: inline-block;
+  border: 1px solid #f7f6f3;
+  margin-top: 0;
+}
+.installed-program_uninstall-single {
+  border: 1px solid #b8b8b8;
+}
+.installed-program_uninstall-single:hover {
+  color: #0799c4;
+  border: 1px solid #0799c4;
+}
+.program-name-sup-offer {
+    position: relative;
+    top: -7px;
+    right: -12px;
+    font-size: 16px;
+    color: #44AD64;
+}
+.program-row_btn .installed-program_uninstall-single {
+    margin-top: 0;
+}
+.installed-program_uninstall-single:focus {
+    outline: none;
+    border: 1px solid #d8dadd;
+}
+.installed-program_uninstall-single::focus {
+    outline: none;
+    border: 1px solid #d8dadd;
+}
+.installed-program_uninstall-single:active {
+    outline: none;
+    border: 1px solid #d8dadd;
+}
+.installed-program_uninstall-single-is-disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+.installed-program_uninstall-single-is-loading {
+    position: relative;
+    text-align: center;
+    line-height: normal;
+    cursor: default;
+    pointer-events: none;
+}
+.installed-program_uninstall-single-loader {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin-left: -13px;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.installed-program_uninstall-single span,
+.installed-program_uninstall-single-icon {
+    vertical-align: middle;
+}
+.installed-program_install-single-icon {
+  color: #c0c2c5;
+  font-size: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.is-rtl-direction .installed-program_install-single-icon {
+  margin-left: 10px;
+}
+.installed-program_uninstall-single:hover .installed-program_install-single-icon,
+.installed-program_uninstall-single:hover .installed-program_uninstall-single-icon {
+  color: #0799c4;
+}
+
+.list-header_arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -47.5px;
+  width: 95px;
+  height: 10px;
+  z-index: 40;
+  font-size: 0;
+}
+.screen-title {
+  padding-top: 36px;
+  padding-bottom: 34px;
+  margin: 0;
+  font-size: 30px;
+  color: #2F394A;
+  font-family: 'Proxima Nova Semibold', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  font-weight: normal;
+}
+.screen-copyright {
+  font-size: 16px;
+  color: #949494;
+  font-family: 'Proxima Nova Light', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  text-align: center;
+}
+.semi-transparent-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}

@@ -1,0 +1,188 @@
+/* Стили для IE6 */
+
+
+#loader{
+	background: url(../Tools/load8.gif) no-repeat scroll center center white;
+}
+#progress{
+	color:black;
+}
+*html .start_head-logo {
+	width: 263px;
+	height: 74px;
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/med_logo_dark.png');
+	background-position: center center;
+	background-size: 263px 74px;
+}
+
+/* Старый добрый дедовский способ */
+* html #m-down{
+	background: none;
+
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/download.png');
+	background-position: center center;
+
+}
+* html #m-setup{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/setup.png');
+	background-position: center center;
+}
+
+* html #m-pc {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/pc.png');
+	background-position: center center;
+}
+
+* html #m-apps{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/apps.png');
+	background-position: center center;
+}
+* html #m-toolkit{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/toolkit.png');
+	background-position: center center;
+}
+* html #m-reload{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/reload-sm.png');
+	background-position: center center;
+}
+
+* html #m-store{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/store.png');
+	background-position: center center;
+}
+* html #m-toolkit{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/toolkit.png');
+	background-position: center center;
+}
+* html #m-gears{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/gears.png');
+	background-position: center center;
+}
+* html #m-help{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/charms/help.png');
+	background-position: center center;
+}
+* html #drv-sound{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/speaker.png');
+	background-position: center center;
+}
+* html #drv-wifi{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/wifi.png');
+	background-position: center center;
+}
+* html #drv-cam{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cam.png');
+	background-position: center center;
+}
+* html #drv-generic{
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/device-generic.png');
+	background-position: center center;
+}
+* html .menu-e:active{
+
+}
+
+.copyright {
+    position: absolute !important;
+}
+
+.footer_meta-lang-select select.is-hidden,
+.menu_language-select  select.is-hidden {
+	visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.programs-list_head-title,
+.programs-list_head-btn {
+  display: inline;
+}
+.header_logo-img {
+	background-image: none;
+	width: 168px;
+	height: 22px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/header/header-logo.png', sizingMethod='scale');
+	background-position: center center;
+}
+
+.settings-header_caption {
+  width: 90%;
+}
+.window-min-width-1024 .settings-header_caption,
+.window-min-width-1200 .settings-header_caption {
+    width: 710px;
+}
+.cta-green-btn-is-disabled,
+.installed-program_uninstall-single-is-disabled {
+	background-color: #a8d0b0;
+}
+
+.drivers-footer_btn {
+  width: 200px !important;
+}
+
+.drivers-screen_list-row-install-caption,
+.drivers-screen_list-name-arrow,
+.drivers-screen_driver-menu {
+  visibility: visible;
+}
+.screen_list-cell-version-text,
+.drivers-screen_list-row-install-caption {
+	margin-top: 15px;
+}
+.drivers-screen_list-cell-rate {
+	margin-top: 30px;
+}
+.drivers-screen_list-arrow-col .custom-control_checkbox-input {
+ 	margin-top: 20px;
+}
+.drivers-screen_driver-status-text {
+	display: block;
+	margin-top: 25px;
+}
+.drivers-screen_driver-menu-button {
+	margin-top: 25px;
+}
+
+.installation-header-promo_bullets-centered {
+  display: inline;
+}
+.app_border-top, .app_border-bottom, .app_border-left, .app_border-right {
+	display: none;
+}
+.drivers-header_controls-checkbox {
+  top: 12px;
+}
+.configurator_content-is-disabled {
+  visibility: hidden;
+}
+.start-slider_thumb {
+  background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/screens/startscreen-slider-oval.png');
+	background-position: center center;
+}
+.start-slider_wrap:hover .start-slider_thumb {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/screens/startscreen-slider-oval-hover.png');
+	background-position: center center;
+}
+.start_slider_text-block {
+  height: 60px;
+  width: 450px;
+}

@@ -1,0 +1,255 @@
+html,
+.final_promo-button,
+.menu_item-text,
+.menu-system_item-text,
+.menu_language-label,
+.menu_copyright-btn,
+.menu_copyright-item,
+.installed-program_caption,
+.main tr .installed-program_row,
+.installed-program_row,
+.button.btn,
+.diagnostic-list_row,
+.screen-title,
+.program-header_caption,
+.programs-list_head-title,
+.installed-program_head-col-name,
+.start_wrapper-button,
+.start_msg,
+.features_col-text,
+.footer,
+.start_promo-banner-usa-logo-label,
+.start_promo-banner-usa-title,
+.start_promo-banner-usa-footer,
+.installation-header_wrapper,
+.installation-list_status-timer,
+.installation-table_wrapper,
+.configurator_text,
+.configurator_type,
+.programs_text,
+.programs_type,
+.installed-program_uninstall-single,
+.loading-screen_progress-status,
+.settings-screen_select select,
+.cta-green-btn,
+.screen-copyright {
+  font-family: 'Proxima Nova Semibold', 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+}
+.installed-program_uninstall-single-btn-filler {
+  display: inline;
+}
+.popover.popover_bottom .arrow {
+    top: -10px;
+}
+.start-popover_arrow {
+  top: -10px;
+  right: 20px;
+}
+.start_cta-caption,
+.start_msg {
+    width: 540px;
+}
+.list_info-link-icon {
+    vertical-align: middle;
+}
+
+.move-to-top {
+    display: none;
+}
+.window-min-width-1200 .installation-header-promo {
+    text-align: center;
+}
+.installation-header-promo_caption {
+    text-align: left;
+}
+.footer_meta-lang-label {
+  display: none;
+}
+.new_footer .new_footer__btn {
+  font-family: 'Proxima Nova Regular', 'Segoe UI', 'Open Sans', Arial, sans-serif;
+}
+.footer_meta-lang-select {
+  width: 150px;
+}
+.footer_meta-lang-select select {
+  width: 120px;
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+.new-header_controls-btn--icon {
+  margin-right: 30px;
+}
+.drivers-screen_list-name-label {
+  padding-left: 40px;
+}
+/* Switch fallback */
+.custom-control_switch-label {
+  display: none!important;
+}
+.custom-control_switch-input {
+  position: static;
+  margin-left: 0;
+  margin-top: 3px;
+  visibility: visible;
+}
+.drivers-header_controls-text {
+  padding-left: 40px;
+}
+.chat-message-wrapper {
+  margin-bottom: 20px;
+}
+.chat-message {
+  border: solid 2px #dedede;
+}
+.chat-logo {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/assistant-chat/chat-icon.png', sizingMethod='scale');
+}
+.assistant-chat {
+  height: 93%;
+}
+.assistant-chat_sound {
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/assistant-chat/no-sound.png', sizingMethod='scale');
+}
+.assistant-stories_img {
+  width: 140px;
+}
+.assistant-utils li {
+  margin-top: 25px;
+}
+.header {
+  background: none;
+}
+.header_installation.is-hidden {
+  display: none;
+}
+.header_installation .header_controls .header_controls-btn {
+  border: none;
+}
+.header_installation .header_logo,
+.header_installation .header_controls .header_controls-btn {
+  display: none;
+}
+.header_installation .header_controls .close {
+  display: inline-block;
+}
+.first-loading-massage,
+.next-loading-massage {
+  background-color: #08a09a;
+}
+.assistant-slide_wrapper {
+  height: 100%;
+}
+.start_autoinstall-cancel-btn {
+  position: fixed;
+  bottom: 55px;
+}
+.drp-team-gif {
+  display: none;
+}
+.start-screen_setup-list_checkbox-input[type='checkbox']:not(:checked),
+.start-screen_setup-list_checkbox-input[type='checkbox']:checked {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+.start-screen_setup-list_checkbox-input {
+  position: relative;
+  left: 15px;
+  top: -1px;
+  margin-right: 30px;
+}
+.new-assistant-off-block {
+  height: 880px;
+}
+.chat .chat__messages {
+  overflow-y: scroll;
+  height: 850px;
+}
+.chat-message--last {
+  margin-bottom: 100px !important;
+}
+.ie8-chat-message {
+  display: block;
+  height: 1px;
+}
+.start-screen_right-col {
+  height: 1080px;
+  overflow-y: scroll;
+}
+.start-screen_title {
+  margin-top: 50px;
+}
+.new-header_logo-img {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/header/new-header-logo.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/header/new-header-logo.png',sizingMethod='scale')";
+}
+.assistant-drivers-wrapper {
+  height: 400px;
+}
+.assistant-utils-wrapper {
+  overflow-y: hidden;
+}
+.assistant-drivers-item {
+  margin-bottom: 50px;
+  margin-right: 0;
+  width: 50%;
+}
+.assistant-drivers-item-icon {
+  float: left;
+  clear: both;
+}
+.start-screen_autoinstall-setup-btn,
+.start-screen_setup-btn {
+  margin-bottom: 200px;
+}
+.installation-header_progress:after {
+  content: none;
+}
+.new-assistant-slide_team-proof-wrapper {
+  margin-top: 90px;
+}
+.installation-popup_button-arrow {
+  top: 11px;
+}
+.installed-program_switch-checkbox.custom-control_switch-input {
+  top: 8px;
+}
+.drivers-header_controls-checkbox.custom-control_switch-input {
+  top: 13px;
+}
+.mir-content.arrow-left:after,
+.nastya-content.arrow-left:after,
+.kolya-content.arrow-left:after,
+.tim-content.arrow-left:after,
+.igor-content.arrow-left:after,
+.artur-content.arrow-left:after,
+.vadim-content.arrow-left:after,
+.vanya-content.arrow-left:after,
+.marusya-content.arrow-left:after {
+  background-image: none;
+}
+@media screen and (max-height: 768px) {
+  .chat .chat__messages, .new-assistant-off-block {
+    height: 500px;
+  }
+  .start-screen_right-col {
+    height: 768px;
+  }
+  .assistant-drivers-wrapper {
+    height: 370px;
+  }
+}
+@media screen and (max-height: 600px) {
+  .chat .chat__messages, .new-assistant-off-block {
+    height: 350px;
+  }
+  .start-screen_right-col {
+    height: 600px;
+  }
+  .assistant-drivers-wrapper {
+    height: 340px;
+  }
+}

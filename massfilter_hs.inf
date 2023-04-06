@@ -1,0 +1,107 @@
+;*****************************************************************************
+;
+; Windows Virtual Serial Port Setup File
+;
+;Module Name:
+;
+;    massfilter_hs.inf
+;
+;*****************************************************************************
+
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGuid={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%HS%
+DriverVer= 12/12/2011,2.0.0.8
+CatalogFile=massfilter_hs.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+;*************************
+; Source file information
+;*************************
+
+[SourceDisksNames.x86]
+; diskid = description[, [tagfile] [, <unused>, subdir]]
+1 = %HSSRCDISK%,,,\i386
+
+[SourceDisksNames.amd64]
+; diskid = description[, [tagfile] [, <unused>, subdir]]
+1 = %HSSRCDISK%,,,\amd64
+
+[SourceDisksFiles]
+; filename = diskid[,[ subdir][, size]]
+massfilter_hs.sys = 1,,
+
+[DestinationDirs]
+DefaultDestDir = 12
+HSFilter.NT.Copy=12
+
+;*****************************************
+; Massfilter Device Filter Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=HSMass,NTamd64
+
+[HSMass]
+; DisplayName       		Section           DeviceId
+; -----------       		-------           --------
+%HSFilter.0083%=HSFilter, USB\VID_19D2&PID_0083
+
+[HSMass.NTamd64]
+; DisplayName       		Section           DeviceId
+; -----------       		-------           --------
+%HSFilter.0083%=HSFilter, USB\VID_19D2&PID_0083
+
+
+;=====================================================================
+[HSFilter.NT]  
+;=============== Get the standard stuff from Massfilter.inf==============
+Include=usbstor.inf
+Needs=USBSTOR_BULK.NT
+CopyFiles=HSFilter.NT.Copy
+AddReg=HSFilter.NT.AddReg
+
+[HSFilter.NT.Copy]
+massfilter_hs.sys
+
+[HSFilter.NT.AddReg]                            
+; Add registry entries here
+
+[HSFilter.NT.HW]
+;================ Add our own stuff
+AddReg = HSFilter.NT.HW.AddReg
+
+[HSFilter.NT.HW.AddReg]
+HKR,, Label, 0x10000, "HS CDROM Mass Storage Device"
+HKR,,"LowerFilters",0x00010000,"massfilter_hs"
+
+;*****************************************
+; Massfilter Device Filter Service Section
+;*****************************************
+
+[HSFilter.NT.Services]
+Include=usbstor.inf
+Needs=USBSTOR_BULK.NT.Services
+AddService = massfilter_hs,, filter_Service_Inst
+
+[filter_Service_Inst]
+DisplayName    = %filter.SvcDesc%                            
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\massfilter_hs.sys
+LoadOrderGroup = PnP Filter
+
+[Strings]
+HS                  = "HS Incorporated"
+StdMfg              = "HS HandSet CD-ROM Mass Storage Filter"
+HSSRCDISK           = "HS HandSet Multimedia USB Modem Driver Disk"
+HSFilter.0083       = "HS HandSet Mass Storage Filter"
+filter.SvcDesc      = "HS HandSet Mass Storage Filter Driver"
+
+

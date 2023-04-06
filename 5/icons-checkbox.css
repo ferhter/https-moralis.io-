@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'DRPcheckbox';
+  src: url('./fonts/DRPcheckbox/DRPcheckbox.eot');
+  src: url('./fonts/DRPcheckbox/DRPcheckbox.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/DRPcheckbox/DRPcheckbox.woff') format('woff'),
+       url('./fonts/DRPcheckbox/DRPcheckbox.ttf') format('truetype'),
+       url('./fonts/DRPcheckbox/DRPcheckbox.svg#webfontregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,2 @@
+
+<doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title><title><link rel="icon" id="ntpFavicon"/><script src="/setup.js" async><script><link rel="preload" href="/fonts/roboto-all-400-normal.woff" crossorigin="anonymous" as="font" type="font/woff"/><link rel="stylesheet" href="/static.css"/><script defer="defer" src="/static/js/main.8ec34486.js"><script><link href="/static/css/main.abe3eab2.css" rel="stylesheet"><head><body><div id="root"><div><body><html>

@@ -1,0 +1,145 @@
+
+;
+;Copyright (c) 2012 VIA Telecom., Inc.  All rights reserved.
+;
+;   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;   IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;   PURPOSE.
+;
+;Module Name:
+;
+;    ets.inf
+;
+;Abstract:
+;    INF file for the via usb ets driver
+;
+
+
+; ==============================================================
+; ================= Version/Class Sections =====================
+; ==============================================================
+[Version]
+DriverVer       =  10/30/2012, 2.3.19.1
+Signature       =  "$CHICAGO$"
+Provider        =  %VENDOR%
+Class           =  USB
+ClassGUID       =  {36FC9E60-C465-11CF-8056-444553540000} 
+CatalogFile     =  viahsets.cat
+
+
+; ==============================================================
+; =================== Table of Contents ========================
+; ==============================================================
+[Manufacturer]
+%VENDOR% = DeviceList, NTamd64
+
+; ==============================================================
+; ================= Control Flags Sections =====================
+; ==============================================================
+[ControlFlags]
+ExcludeFromSelect = *
+
+; ==============================================================
+; ================== Driver/Device Sections ====================
+; ==============================================================
+[DeviceList]
+%DEV.ZTE%  = DriverInstall, USB\VID_19D2&PID_0424&MI_00
+%DEV.ZTE%  = DriverInstall, USB\VID_19D2&PID_0425&MI_01
+
+[DeviceList.NTamd64]
+%DEV.ZTE%  = DriverInstall, USB\VID_19D2&PID_0424&MI_00
+%DEV.ZTE%  = DriverInstall, USB\VID_19D2&PID_0425&MI_01
+; ==============================================================
+; ---------------- Windows 2000 & XP Sections ------------------
+; ==============================================================
+[DriverInstall.NT]
+CopyFiles  = DrvFiles
+AddReg     = DriverAddReg
+
+
+[DriverInstall.NT.HW]        ; Reference to put ChildID key in hardware devnode
+AddReg = DeviceAddReg
+
+
+; ==============================================================
+; =================== Copy Files Section =======================
+; ==============================================================
+[DestinationDirs]
+DrvFiles   = 12					; \Windows\System32\drivers 
+
+[DrvFiles]
+viahsets.sys	
+
+[SourceDisksNames.x86]
+1 = %DISK_NAME%,,,\i386
+
+[SourceDisksNames.amd64]
+1 = %DISK_NAME%,,,\amd64
+
+[SourceDisksFiles]
+viahsets.sys = 1,,
+
+
+; ==============================================================
+; =============== Services Description Sections ================
+; ==============================================================
+[DriverInstall.NT.Services]
+;DelService = VIA_USB_ETS, 0x00000204
+AddService = viahsets, 0x00000002, DriverService
+
+
+[DriverService]
+DisplayName   = %SERVICENAME%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\viahsets.sys
+
+
+; ==============================================================
+; ================= Common AddReg Sections =====================
+; ==============================================================
+; Property providers can be registered for a specific device by 
+; using the following addreg entry in the device install section. 
+; Doing this makes HKR relative to the driver section and thus 
+; is invoked only for the specific device. 
+
+;[PowerPropPageAddReg]
+;HKR,,EnumPropPages32,,samclass.dll
+;HKR,,Icon,,101
+
+
+; ==============================================================
+; --------------------- Registry Sections ----------------------
+; ==============================================================
+[DriverAddReg]
+HKR,,,,VIA
+HKR,,Icon,,-5
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,viahsets.sys
+
+[DeviceAddReg]
+;HKR,,"DebugEnable", 0x10001, 1
+;HKR,,"DebugLevel", 0x10001, 0x00000000
+;HKR,,"DebugAreas", 0x10001, 0x00000000
+;HKR,,"DebugPrintingEnable", 0x10001, 1
+;HKR,,"SelectSuspendEnable", 0x10001, 1
+;HKR,,"PowerConservationIdleTimeout", 0x10001, 0
+;HKR,,"PerformanceIdleTimeout", 0x10001, 0
+;HKR,,"SerialNumber", 0x10001, 32
+
+;[ServiceAddReg]
+;HKR,"Parameters","LastSerialNumberUsed", 0x10001, 
+;HKR,"Parameters","MaxSerialNumber", 0x10001, 
+;HKR,"Parameters","SerialNumbersUsed", 0x10001, 
+
+
+; ==============================================================
+; =================== Strings Sections =========================
+; ==============================================================
+[Strings]
+VENDOR         = "ZTE Corporation"
+SERVICENAME    = "VIA Handset ETS Driver For ZTE"
+DISK_NAME      = "ZTE Driver Install Disk"
+DEV.ZTE        = "ZTE 3GPhone ETS Interface"

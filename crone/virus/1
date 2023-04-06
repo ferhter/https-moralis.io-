@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings><bdch><KeepDumps>0</KeepDumps><StartBDReinit>1</StartBDReinit><BDReinitPath>C:\Program Files\Bitdefender\Bitdefender Security\antispam32\BDReinit.exe</BDReinitPath><BDncPath>C:\Program Files\Bitdefender\Bitdefender Security\antispam32\bdnc.dll</BDncPath><PassUnhandledExceptionToOS>0</PassUnhandledExceptionToOS><UseWer>0</UseWer></bdch><bdreinit><Fingerprint>HKEY_LOCAL_MACHINE\Software\Bitdefender\Fingerprint</Fingerprint><ProductVersion>HKEY_LOCAL_MACHINE\Software\Bitdefender\About\ProductVersion</ProductVersion><BDSubWizPath>C:\Program Files\Bitdefender\Bitdefender Security\antispam32\BdSubWiz.exe</BDSubWizPath><BdecPath>C:\Program Files\Bitdefender\Bitdefender Security\antispam32\bdec.dll</BdecPath><AnonId>05bb26c4950b0b3cdce646a81b334c061671c433</AnonId><AppId>com.bitdefender.cl</AppId><BdecSettingsFileName>bdch_bdec.ini</BdecSettingsFileName><SubmitCrashEvent>1</SubmitCrashEvent><ProductIdentifier>com.bitdefender.cl_26</ProductIdentifier><RestartCrashNumber>3</RestartCrashNumber><CompanyName>Bitdefender</CompanyName><DumpPath>C:\ProgramData\Bitdefender\Desktop\Temp</DumpPath><DontSubmitDumps>0</DontSubmitDumps><Lang>ES</Lang><Email>bdch@bitdefender.com</Email><LiveSrvPath>SOFTWARE\Bitdefender\Livesrv</LiveSrvPath><SilentSubmit>0</SilentSubmit><CompIDPath></CompIDPath><CrashInfoPath></CrashInfoPath></bdreinit></settings>
+
+5496d5c2-7128-4c5a-a97d-e8c59b30dfe0
+RandomizeDNSNames = 0
+RandomiseDNSNames = 0
+
+BootstrapServer = nimbus.bitdefender.net
+UseSecureConnection = 1
+
+# ProxyName = 
+# ProxyUser = 
+# ProxyPass =
